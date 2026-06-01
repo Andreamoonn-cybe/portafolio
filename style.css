@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,112 +7,178 @@
 
 /* Página */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f7f8fa;
-    color: #333;
-    line-height: 1.6;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(
+        135deg,
+        #f4f7fb 0%,
+        #eef3ff 100%
+    );
+
+    color: #1f2937;
+    line-height: 1.7;
 }
 
 /* Contenedor */
 main {
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 2rem;
 }
 
 /* Cabecera */
 header {
     text-align: center;
-    padding: 4rem 2rem;
-    background-color: white;
-    border-bottom: 1px solid #e5e7eb;
+    padding: 5rem 2rem;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: .5rem;
 }
 
 header p {
-    color: #666;
+    color: #5b6472;
+    font-size: 1.1rem;
 }
 
-/* Secciones */
+/* Tarjetas */
 section {
-    background-color: white;
-    margin-top: 1.5rem;
+    background: rgba(255,255,255,0.85);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 18px;
+
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+    margin-bottom: 1.5rem;
+
+    border: 1px solid rgba(255,255,255,0.4);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.05);
+
+    transition: transform .25s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
 }
 
 /* Títulos */
 h2 {
-    margin-bottom: 1rem;
-    color: #1f2937;
+    position: relative;
+
+    margin-bottom: 1.5rem;
+
+    color: #111827;
 }
 
-/* Lista de tecnologías */
+h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 4px;
+
+    margin-top: .4rem;
+
+    border-radius: 99px;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+/* Tecnologías */
 ul {
     list-style: none;
 }
 
 li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f0f0f0;
+    padding: .7rem 0;
+
+    border-bottom: 1px solid #eceff5;
 }
 
-/* Tarjetas de proyectos */
+/* Proyectos */
 article {
     padding: 1rem 0;
 }
 
 article:not(:last-child) {
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid #eceff5;
+}
+
+article h3 {
+    margin-bottom: .5rem;
 }
 
 /* Enlaces */
 a {
     color: #2563eb;
+
     text-decoration: none;
-    font-weight: 500;
+
+    font-weight: 600;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #7c3aed;
 }
 
-/* Botón simple */
+/* Botones */
 .btn {
     display: inline-block;
+
     margin-top: 1rem;
-    padding: 0.7rem 1.2rem;
-    background-color: #2563eb;
+
+    padding: .8rem 1.4rem;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
     color: white;
-    border-radius: 8px;
+
     text-decoration: none;
+
+    transition: .25s;
 }
 
 .btn:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(37,99,235,.25);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+
+    padding: 2rem;
+
+    color: #6b7280;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
 
-    header {
-        padding: 3rem 1rem;
-    }
-
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     main {
         padding: 1rem;
     }
 
-    section {
-        padding: 1.5rem;
-    }
 }
